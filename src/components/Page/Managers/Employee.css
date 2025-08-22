@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center; /* توسيط عمودي */
+  flex-wrap: wrap; /* يخلي العناصر تنزل للسطر الثاني إذا ماكو مساحة */
+  font-family: "Cairo", sans-serif !important;
+  padding: 10px 20px;
+}
+
+.header .header-right {
+  margin-left: auto; /* يخليها تروح لأقصى يمين */
+}
+
+.heqder-title {
+  font-size: 30px;
+}
+
+.svg-emp {
+  color: green;
+  font-size: 100px !important;
+}
+
+.heqder-title span {
+  color: rgba(24, 27, 29, 0.75) !important;
+  font-size: 17px !important;
+}
+
+.header .header-left {
+  display: flex;
+  gap: 10px; /* مسافة بين الأزرار */
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.header-left .btn-one {
+  padding: 5px 12px;
+  border: 1px solid green;
+  border-radius: 6px;
+  background-color: #198754;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-left .btn-one span {
+  font-size: 15px;
+  font-family: "Cairo", sans-serif;
+}
+
+.header-left .btn-two {
+  padding: 5px 12px;
+  border: 1px solid green;
+  border-radius: 6px;
+  background-color: #fff;
+  color: green;
+  cursor: pointer;
+}
+
+.header-left .btn-two span {
+  font-size: 15px;
+  font-family: "Cairo", sans-serif;
+}
+
+svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Media Queries للاستجابة */
+@media (max-width: 992px) {
+  .heqder-title {
+    font-size: 14px;
+  }
+  .svg-emp {
+    font-size: 70px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* العناصر تصير فوق بعض */
+    align-items: flex-start;
+  }
+  .header .header-right {
+    margin-left: 0; /* نشيل الهوامش */
+    margin-top: 10px;
+  }
+  .header-left {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .heqder-title {
+    font-size: 20px;
+  }
+  .header-left .btn-one,
+  .header-left .btn-two {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}
