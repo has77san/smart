@@ -5,6 +5,20 @@
   font-family: "Cairo", sans-serif !important;
   padding: 10px 20px;
 }
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 .header .header-right {
   margin-left: auto; /* يخليها تروح لأقصى يمين */

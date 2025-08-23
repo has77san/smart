@@ -1,37 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.floating-toolbar {
-    position: fixed;
-    top: 20px;
-    left: 45%;
-    transform: translateX(-50%);
-    z-index: 999;
-    border-radius: 25px;
-    padding: 0.5rem;
-    display: flex;
-    gap: 0.25rem;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    font-family: "Cairo", sans-serif;
+
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
 }
 
-.toolbar-icon{ 
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    color: #6c757d;
-    font-size: 0.9rem; 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .floating-toolbar {
     position: fixed;
     top: 20px;
-    left: 45%;
+    left: 68%;
     transform: translateX(-50%);
     z-index: 999;
     background: white;
@@ -39,10 +27,12 @@
     display: flex;
     gap: 0.25rem;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    width: 120px;
-    height: 40px;
+    width: 140px;
+    height: 50px;
 
 }
+
+
 
 .toolbar-icon {
     width: 40px;
@@ -55,23 +45,20 @@
     text-decoration: none;
     color: #6c757d;
     transition: all 0.3s ease;
+    margin: 5px 2px;
 }
 
-svg {
-    width: 20px;
-    height: 20px;
-    /* margin: 0 8.5px; */
+.toolbar-icon svg {
+    width: 50px;
 }
+
 
 .page-title {
     color: #2c3e50;
     /* font-weight: 700; */
-    /* margin-left: 680px; */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+     margin-left: 680px; 
+
     margin: 50px 0;
-    font-family: 'Courier New', Courier, monospace;
     font-family: 'Cairo', sans-serif;
 
 }
@@ -84,6 +71,7 @@ svg {
 .page-title h1 svg {
     width: 30px;
     height: 30px;
+    margin: 7px 10px;
     margin-bottom: -5px; 
 }
 
@@ -92,8 +80,9 @@ svg {
 
 .cards {
     display: flex;
-    margin: 0 40px;
     cursor: pointer;
+    width: 180vh;
+    margin-left: 50px;
 }
 
 .cardat {
@@ -101,8 +90,8 @@ svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 750px;
-    height: 200px;
+    width: 740px;
+    height: 180px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -152,6 +141,7 @@ svg {
   gap: 15px;
   /* margin-right: 300px; */
   padding: 20px;
+  max-width: 180vh;
 }
 
 .card {
@@ -165,6 +155,7 @@ svg {
   min-height: 90px;
   font-weight: bold;
   overflow: hidden; 
+  width: 180px;
 }
 
 .card:hover {
@@ -212,20 +203,18 @@ svg {
 .card_fotter {
     display: flex;
     gap: 20px;
-    justify-content: end;
-    margin-right: 30px;
-    /* margin-left: 100px; */
-    
+    width: 180vh;  
+    margin-left: 60px;
+  
 }
 
 .card_fotter_item {
     background-color: #fff;
-    width: 50%;
     /* margin: 0px 10px; */
     height: 120px;
     border-radius: 5px;
     margin-bottom: 45px;
-    
+    width: 740px;
     
 }
 

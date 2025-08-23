@@ -1,18 +1,19 @@
 // import "./Employee.css";
 
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import PageFilter from "../../../layouts/PageFilter";
 import PageHeader from "../../../layouts/PageHeader";
 import Table from "../../../layouts/Table";
 import Master from "../../../Master";
+import './user.css'
 
 function User() {
 
     
 
   return (
+    
     <Master>
-      <div className="container-main">
+      <div className="container-main slide-up">
         <div className="floating-toolbar">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg

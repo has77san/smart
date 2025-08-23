@@ -1,14 +1,15 @@
-import React from 'react'
-import Master from '../../../Master'
-import PageHeader from '../../../layouts/PageHeader'
-import PageFilter from '../../../layouts/PageFilter'
-import Table from '../../../layouts/Table'
-import { FaRegUser } from 'react-icons/fa'
+import React from "react";
+import Master from "../../../Master";
+import PageHeader from "../../../layouts/PageHeader";
+import PageFilter from "../../../layouts/PageFilter";
+import Table from "../../../layouts/Table";
+import { FaRegUser } from "react-icons/fa";
+import "./delega.css";
 
 function Delegates() {
   return (
     <Master>
-      <div className="container-main">
+      <div className="container-main slide-up">
         <div className="floating-toolbar">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg
@@ -79,18 +80,37 @@ function Delegates() {
           </a>
         </div>
 
-        <PageHeader Text={"عرض وإدارة جميع شركات التوصيل"} Title={"إدارة الناقلين"} icon={<FaRegUser className="text-6xl w-6xl" />}/>
-           
-          <PageFilter />
+        <PageHeader
+          Text={"عرض وإدارة كافة المندوبين المسجلين"}
+          Title={"إدارة المندوبين"}
+          icon={
+            <svg
+              className="svg"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="user-tie"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M224 256A128 128 0 1 1 224 0a128 128 0 1 1 0 256zM209.1 359.2l-18.6-31c-6.4-10.7 1.3-24.2 13.7-24.2H224h19.7c12.4 0 20.1 13.6 13.7 24.2l-18.6 31 33.4 123.9 36-146.9c2-8.1 9.8-13.4 17.9-11.3c70.1 17.6 121.9 81 121.9 156.4c0 17-13.8 30.7-30.7 30.7H285.5c-2.1 0-4-.4-5.8-1.1l.3 1.1H168l.3-1.1c-1.8 .7-3.8 1.1-5.8 1.1H30.7C13.8 512 0 498.2 0 481.3c0-75.5 51.9-138.9 121.9-156.4c8.1-2 15.9 3.3 17.9 11.3l36 146.9 33.4-123.9z"
+              ></path>
+            </svg>
+          }
+        />
 
-         <div className="mt-[40px]">
-           <Table />
-         </div>
+        <PageFilter />
 
-
+        <div className="mt-[40px]">
+          <Table />
+        </div>
       </div>
     </Master>
-  )
+  );
 }
 
-export default Delegates
+export default Delegates;

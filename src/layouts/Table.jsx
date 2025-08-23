@@ -1,8 +1,7 @@
 import { Calendar, Edit, FileText, MessageCircle, Trash2 } from "lucide-react";
-import React, { useState, useMemo } from "react";
 // import ContactsTable from "./ContactsTable";
 
-export default function Table() {
+export default function Table({titleone,titletow,titlethree,titlefour,titlefive,titlesix}) {
   const data = [
     {
       name: "أحمد علي",
@@ -77,7 +76,7 @@ export default function Table() {
   ];
 
   return (
-    <div className="w-[90%] m-auto text-right">
+    <div className="w-[160vh] ml-[50px] m-auto text-right">
       <div className="relative overflow-x-auto">
         <div className="flex border-gray-300 rounded-[5px] border justify-between items-center p-2 bg-[rgba(248,249,250)]">
           {/* يسار */}
@@ -100,7 +99,7 @@ export default function Table() {
               </svg>
             </button>
 
-             <button className=" text-[#fff] p-2 bg-gray-500">
+            <button className=" text-[#fff] p-2 bg-gray-500">
               <svg
                 className="w-6 h-6"
                 aria-hidden="true"
@@ -140,14 +139,14 @@ export default function Table() {
           </div>
         </div>
         <table className="w-full text-sm text-right text-gray-500">
-          <thead className="text-xs text-black uppercase bg-[#90b290] border border-blue-700 w-[1000px]">
+          <thead className="text-xs text-black uppercase bg-[#cbe6d1] border-none">
             <tr>
-              <th className="px-6 py-3">الإجراءات</th>
-              <th className="px-6 py-3">العدد</th>
-              <th className="px-6 py-3">الحالة</th>
-              <th className="px-6 py-3">العنوان</th>
-              <th className="px-6 py-3">الهاتف</th>
-              <th className="px-6 py-3">الاسم</th>
+              <th className="px-6 py-3 w-[160px]">{titlesix}</th>
+              <th className="px-6 py-3">{titlefive}</th>
+              <th className="px-6 py-3">{titlefour}</th>
+              <th className="px-6 py-3">{titlethree}</th>
+              <th className="px-6 py-3">{titletow}</th>
+              <th className="px-6 py-3">{titleone}</th>
             </tr>
           </thead>
           <tbody>
@@ -156,27 +155,18 @@ export default function Table() {
                 key={index}
                 className="bg-white border-b border-gray-200 hover:bg-gray-100"
               >
-                <td className="px-6 py-4 flex gap-3">
-                  <Edit size={18} className="text-blue-500 cursor-pointer" />
-                  <MessageCircle
-                    size={18}
-                    className="text-green-500 cursor-pointer"
-                  />
-                  <Calendar
-                    size={18}
-                    className="text-yellow-500 cursor-pointer"
-                  />
-                  <FileText
-                    size={18}
-                    className="text-purple-500 cursor-pointer"
-                  />
-                  <Trash2 size={18} className="text-red-500 cursor-pointer" />
+                <td className="px-6 py-4 flex gap-4">
+                  <Edit size={32} className="text-blue-500" />
+                  <MessageCircle size={32} className="text-green-500" />
+                  <Calendar size={32} className="text-yellow-500" />
+                  <FileText size={32} className="text-purple-500" />
+                  <Trash2 size={32} className="text-red-500" />
                 </td>
-                <td className="px-6 py-4">{item.count}</td>
-                <td className="px-6 py-4">{item.status}</td>
-                <td className="px-6 py-4">{item.address}</td>
-                <td className="px-6 py-4">{item.phone}</td>
-                <td className="px-6 py-4 font-medium text-gray-900">
+                <td className="px-6 py-4 text-right">{item.count}</td>
+                <td className="px-6 py-4 text-right">{item.status}</td>
+                <td className="px-6 py-4 text-right">{item.address}</td>
+                <td className="px-6 py-4 text-right">{item.phone}</td>
+                <td className="px-6 py-4 font-medium text-gray-900 text-right">
                   {item.name}
                 </td>
               </tr>

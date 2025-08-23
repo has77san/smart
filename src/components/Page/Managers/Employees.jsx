@@ -4,14 +4,14 @@ import PageHeader from "../../../layouts/PageHeader";
 import Table from "../../../layouts/Table";
 import Master from "../../../Master";
 import "./Employee.css";
-
 function Employees() {
 
     
 
   return (
+    
     <Master>
-      <div className="container-main">
+      <div className="container-main slide-up">
         <div className="floating-toolbar">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg
@@ -82,12 +82,12 @@ function Employees() {
           </a>
         </div>
 
-        <PageHeader Title={"الموظفين"} Text={"عرض وإدارة جميع موظفي النظام"} icon={<FaUsers />}/>
+        <PageHeader  Title={"الموظفين"} Text={"عرض وإدارة جميع موظفي النظام"} icon={<FaUsers  />}/>
            
           <PageFilter />
 
          <div className="mt-[40px]">
-           <Table/>
+           <Table titleone={"الاسم"} titletow={"رقم الهاتف"} titlethree={"المسمى الوظيفي"} titlefour={"الحالة"} titlefive={"الإجراءات"} titlesix={"الإجراءات"}/>
          </div>
 
 

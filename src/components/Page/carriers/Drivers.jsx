@@ -6,11 +6,12 @@ import PageFilter from '../../../layouts/PageFilter'
 import Table from '../../../layouts/Table'
 import { FaRegUser } from 'react-icons/fa'
 import Master from '../../../Master'
+import './carriers.css'
 
 function Drivers() {
   return (
     <Master>
-      <div className="container-main">
+      <div className="container-main slide-up">
         <div className="floating-toolbar">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg
