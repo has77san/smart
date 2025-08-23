@@ -1,5 +1,7 @@
 import Master from "../../../Master";
 import "./Home.css";
+import { motion } from "framer-motion";
+
 import {
   FaUser,
   FaTruck,
@@ -17,35 +19,112 @@ import {
 } from "react-icons/fa";
 
 function Home() {
-
   const cardsData = [
-  { icon: <FaUser size={24} />, number: 0, title: "المدراء", color: "linear-gradient(135deg,#6a11cb,#2575fc)" },
-  { icon: <FaTruck size={24} />, number: 2, title: "الشحنات", color: "linear-gradient(135deg,#00c6ff,#0072ff)" },
-  { icon: <FaChartBar size={24} />, number: 3, title: "الناقلين", color: "linear-gradient(135deg,#f7971e,#ffd200)" },
-  { icon: <FaBox size={24} />, number: 4, title: "التجار", color: "linear-gradient(135deg,#11998e,#38ef7d)"},
-  { icon: <FaCogs size={24} />, number: 5, title: "المستخدمين", color: "linear-gradient(135deg,#ff416c,#ff4b2b)" },
-  { icon: <FaUsers size={24} />, number: 6, title: "المنتجات",color: "linear-gradient(135deg,#485563,#29323c)"   },
-  { icon: <FaBiking size={24} />, number: 7, title: "المندوبين", color: "linear-gradient(135deg,#00b09b,#96c93d)" },
-  { icon: <FaCalculator size={24} />, number: 8, title: "الحسابات", color: "linear-gradient(135deg,#8e2de2,#4a00e0)" },
-  { icon: <FaHome size={24} />, number: 9, title: "الرئيسية", color: "linear-gradient(135deg,#1abc9c,#16a085)" },
-  { icon: <FaCog size={24} />, number: 10, title: "الخيارات", color: "linear-gradient(135deg,#6c757d,#495057)" },
-  { icon: <FaQuestionCircle size={24} />, number: 11, title: "الأسئلة", color: "linear-gradient(135deg,#f12711,#f5af19)" },
-  { icon: <FaGift size={24} />, number: 12, title: "الهدايا", color: "linear-gradient(135deg,#ff512f,#dd2476)" },
-  { icon: <FaGift size={24} />, number: 12, title: "الهدايا", color: "linear-gradient(135deg,#ff512f,#dd2476)" },
-  { icon: <FaGift size={24} />, number: 12, title: "الهدايا", color: "linear-gradient(135deg,#ff512f,#dd2476)" },
-  { icon: <FaGift size={24} />, number: 12, title: "الهدايا", color: "linear-gradient(135deg,#ff512f,#dd2476)" },
-  { icon: <FaGift size={24} />, number: 12, title: "الهدايا", color: "linear-gradient(135deg,#ff512f,#dd2476)" },
-
-
-];
+    {
+      icon: <FaUser size={24} />,
+      number: 0,
+      title: "المدراء",
+      color: "linear-gradient(135deg,#6a11cb,#2575fc)",
+    },
+    {
+      icon: <FaTruck size={24} />,
+      number: 2,
+      title: "الشحنات",
+      color: "linear-gradient(135deg,#00c6ff,#0072ff)",
+    },
+    {
+      icon: <FaChartBar size={24} />,
+      number: 3,
+      title: "الناقلين",
+      color: "linear-gradient(135deg,#f7971e,#ffd200)",
+    },
+    {
+      icon: <FaBox size={24} />,
+      number: 4,
+      title: "التجار",
+      color: "linear-gradient(135deg,#11998e,#38ef7d)",
+    },
+    {
+      icon: <FaCogs size={24} />,
+      number: 5,
+      title: "المستخدمين",
+      color: "linear-gradient(135deg,#ff416c,#ff4b2b)",
+    },
+    {
+      icon: <FaUsers size={24} />,
+      number: 6,
+      title: "المنتجات",
+      color: "linear-gradient(135deg,#485563,#29323c)",
+    },
+    {
+      icon: <FaBiking size={24} />,
+      number: 7,
+      title: "المندوبين",
+      color: "linear-gradient(135deg,#00b09b,#96c93d)",
+    },
+    {
+      icon: <FaCalculator size={24} />,
+      number: 8,
+      title: "الحسابات",
+      color: "linear-gradient(135deg,#8e2de2,#4a00e0)",
+    },
+    {
+      icon: <FaHome size={24} />,
+      number: 9,
+      title: "الرئيسية",
+      color: "linear-gradient(135deg,#1abc9c,#16a085)",
+    },
+    {
+      icon: <FaCog size={24} />,
+      number: 10,
+      title: "الخيارات",
+      color: "linear-gradient(135deg,#6c757d,#495057)",
+    },
+    {
+      icon: <FaQuestionCircle size={24} />,
+      number: 11,
+      title: "الأسئلة",
+      color: "linear-gradient(135deg,#f12711,#f5af19)",
+    },
+    {
+      icon: <FaGift size={24} />,
+      number: 12,
+      title: "الهدايا",
+      color: "linear-gradient(135deg,#ff512f,#dd2476)",
+    },
+    {
+      icon: <FaGift size={24} />,
+      number: 12,
+      title: "الهدايا",
+      color: "linear-gradient(135deg,#ff512f,#dd2476)",
+    },
+    {
+      icon: <FaGift size={24} />,
+      number: 12,
+      title: "الهدايا",
+      color: "linear-gradient(135deg,#ff512f,#dd2476)",
+    },
+    {
+      icon: <FaGift size={24} />,
+      number: 12,
+      title: "الهدايا",
+      color: "linear-gradient(135deg,#ff512f,#dd2476)",
+    },
+    {
+      icon: <FaGift size={24} />,
+      number: 12,
+      title: "الهدايا",
+      color: "linear-gradient(135deg,#ff512f,#dd2476)",
+    },
+  ];
 
   return (
     <Master>
-      <div className="main-content">
-        <div className="floating-toolbar">
+      <div className="main-content slide-up">
+        <div className="floating-toolbar ">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg
-              className="svg"
+              className=""
               aria-hidden="true"
               focusable="false"
               data-prefix="fas"
@@ -69,7 +148,7 @@ function Home() {
             title="مراقبة المندوبين"
           >
             <svg
-              className="svg"
+              className=""
               aria-hidden="true"
               focusable="false"
               data-prefix="fas"
@@ -89,11 +168,11 @@ function Home() {
 
           <a
             href="/captain_map"
-            className="toolbar-icon"
+            className="toolbar-icon "
             title="مراقبة السائقين"
           >
             <svg
-              className="svg"
+              className=""
               aria-hidden="true"
               focusable="false"
               data-prefix="fas"
@@ -116,7 +195,7 @@ function Home() {
         <br />
 
         <div className="page-title ">
-          <h1 className="flex flex-row justify-center">
+          <h1 className="flex ml-[400px] flex-row justify-center">
             لوحة التحكم الرئيسية
             <svg
               // className="sav"
@@ -181,9 +260,8 @@ function Home() {
           </div>
         </div>
 
-        <div className="section-title flex flex-row justify-end text-center items-center">
+        <div className="section-title w-[1550px] flex flex-row justify-end text-center items-center">
           إحصائيات النظام
-
           <svg
             className="svg-inline--fa fa-chart-bar me-2"
             aria-hidden="true"
@@ -200,57 +278,95 @@ function Home() {
               d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zm96 96c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32zm32 64H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 96H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
             ></path>
           </svg>
-          
         </div>
 
         <div className="cards-container">
-  {cardsData.map((card, index) => (
-    <div
-      className="card"
-      key={index}
-      style={{ background: card.color }}
-    >
-      
-      <div className="card-text">
-        <div className="card-icon">{card.icon}</div>
-        <h3>{card.number}</h3>
-        <p>{card.title}</p>
-      </div>
-    </div>
-  ))}
-</div>
+          {cardsData.map((card, index) => (
+            <div
+              className="card"
+              key={index}
+              style={{ background: card.color }}
+            >
+              <div className="card-text">
+                <div className="card-icon">{card.icon}</div>
+                <h3>{card.number}</h3>
+                <p>{card.title}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-
- <div className="section-title flex flex-row justify-end text-center items-center">
-            النشاط الأخير    
-            <svg class="svg-inline--fa fa-clock me-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path></svg>        </div>
+        <div className="section-title w-[1540px] flex flex-row justify-end text-center items-center">
+          النشاط الأخير
+          <svg
+            class="svg-inline--fa fa-clock me-2"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="clock"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+            ></path>
+          </svg>{" "}
+        </div>
       </div>
 
       <div className="card_fotter">
-
-
         <div className="card_fotter_item shadow-2xl ">
           <div className="p_footer flex flex-row items-center">
             <p> الشحنات الأخيرة</p>
-            <svg class="svg-inline--fa fa-truck-fast me-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="truck-fast" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path></svg>
+            <svg
+              class="svg-inline--fa fa-truck-fast me-2"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="truck-fast"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"
+              ></path>
+            </svg>
           </div>
-          <div className="title_card_fotter_tow">
-            <p>لا توجد شحنات حديثة</p   >
-          </div>
-        </div>
-
-
-
-        <div className="card_fotter_item shadow-2xl ">
-          <div className="p_footer_two flex flex-row items-center">
-            <p> المندوبين المضافين حديثاً</p>
-                <svg class="svg-inline--fa fa-user-plus me-2" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"></path></svg>          </div>
           <div className="title_card_fotter_tow">
             <p>لا توجد شحنات حديثة</p>
           </div>
         </div>
 
-
+        <div className="card_fotter_item shadow-2xl ">
+          <div className="p_footer_two flex flex-row items-center">
+            <p> المندوبين المضافين حديثاً</p>
+            <svg
+              class="svg-inline--fa fa-user-plus me-2"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="user-plus"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
+              ></path>
+            </svg>{" "}
+          </div>
+          <div className="title_card_fotter_tow">
+            <p>لا توجد شحنات حديثة</p>
+          </div>
+        </div>
       </div>
     </Master>
   );
