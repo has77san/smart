@@ -1,8 +1,9 @@
 import { Calendar, Edit, FileText, MessageCircle, Trash2 } from "lucide-react";
 // import ContactsTable from "./ContactsTable";
 
-export default function Table({titleone,titletow,titlethree,titlefour,titlefive,titlesix}) {
+export default function Table({titleone,titletow,titlethree,titlefour,titlefive,titlesix,list}) {
   const data = [
+    
     {
       name: "أحمد علي",
       phone: "07712345678",
@@ -120,7 +121,7 @@ export default function Table({titleone,titletow,titlethree,titlefour,titlefive,
 
           {/* يمين */}
           <div className="flex items-center gap-2">
-            <h1>قائمة الموظفين</h1>
+            <h1>{list}</h1>
             <svg
               className="w-6 h-6"
               aria-hidden="true"

@@ -2,116 +2,372 @@ import Master from "../../../Master";
 import "./Home.css";
 import { motion } from "framer-motion";
 
-import {
-  FaUser,
-  FaTruck,
-  FaChartBar,
-  FaBox,
-  FaCogs,
-  FaUsers,
-  FaBiking,
-  FaCalculator,
-  FaHome,
-  FaCog,
-  FaQuestionCircle,
-  FaGift,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
-
 function Home() {
   const cardsData = [
     {
-      icon: <FaUser size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="box"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"
+          ></path>
+        </svg>
+      ),
       number: 0,
       title: "المدراء",
       color: "linear-gradient(135deg,#6a11cb,#2575fc)",
     },
     {
-      icon: <FaTruck size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="users"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"
+          ></path>
+        </svg>
+      ),
       number: 2,
       title: "الشحنات",
       color: "linear-gradient(135deg,#00c6ff,#0072ff)",
     },
     {
-      icon: <FaChartBar size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="briefcase"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
+          ></path>
+        </svg>
+      ),
       number: 3,
       title: "الناقلين",
       color: "linear-gradient(135deg,#f7971e,#ffd200)",
     },
     {
-      icon: <FaBox size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="truck"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+          ></path>
+        </svg>
+      ),
       number: 4,
       title: "التجار",
       color: "linear-gradient(135deg,#11998e,#38ef7d)",
     },
     {
-      icon: <FaCogs size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="dolly"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M0 32C0 14.3 14.3 0 32 0h72.9c27.5 0 52 17.6 60.7 43.8L257.7 320c30.1 .5 56.8 14.9 74 37l202.1-67.4c16.8-5.6 34.9 3.5 40.5 20.2s-3.5 34.9-20.2 40.5L352 417.7c-.9 52.2-43.5 94.3-96 94.3c-53 0-96-43-96-96c0-30.8 14.5-58.2 37-75.8L104.9 64H32C14.3 64 0 49.7 0 32zM244.8 134.5c-5.5-16.8 3.7-34.9 20.5-40.3L311 79.4l19.8 60.9 60.9-19.8L371.8 59.6l45.7-14.8c16.8-5.5 34.9 3.7 40.3 20.5l49.4 152.2c5.5 16.8-3.7 34.9-20.5 40.3L334.5 307.2c-16.8 5.5-34.9-3.7-40.3-20.5L244.8 134.5z"
+          ></path>
+        </svg>
+      ),
       number: 5,
       title: "المستخدمين",
       color: "linear-gradient(135deg,#ff416c,#ff4b2b)",
     },
     {
-      icon: <FaUsers size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="users-gear"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M144 160A80 80 0 1 0 144 0a80 80 0 1 0 0 160zm368 0A80 80 0 1 0 512 0a80 80 0 1 0 0 160zM0 298.7C0 310.4 9.6 320 21.3 320H234.7c.2 0 .4 0 .7 0c-26.6-23.5-43.3-57.8-43.3-96c0-7.6 .7-15 1.9-22.3c-13.6-6.3-28.7-9.7-44.6-9.7H106.7C47.8 192 0 239.8 0 298.7zM320 320c24 0 45.9-8.8 62.7-23.3c2.5-3.7 5.2-7.3 8-10.7c2.7-3.3 5.7-6.1 9-8.3C410 262.3 416 243.9 416 224c0-53-43-96-96-96s-96 43-96 96s43 96 96 96zm65.4 60.2c-10.3-5.9-18.1-16.2-20.8-28.2H261.3C187.7 352 128 411.7 128 485.3c0 14.7 11.9 26.7 26.7 26.7H455.2c-2.1-5.2-3.2-10.9-3.2-16.4v-3c-1.3-.7-2.7-1.5-4-2.3l-2.6 1.5c-16.8 9.7-40.5 8-54.7-9.7c-4.5-5.6-8.6-11.5-12.4-17.6l-.1-.2-.1-.2-2.4-4.1-.1-.2-.1-.2c-3.4-6.2-6.4-12.6-9-19.3c-8.2-21.2 2.2-42.6 19-52.3l2.7-1.5c0-.8 0-1.5 0-2.3s0-1.5 0-2.3l-2.7-1.5zM533.3 192H490.7c-15.9 0-31 3.5-44.6 9.7c1.3 7.2 1.9 14.7 1.9 22.3c0 17.4-3.5 33.9-9.7 49c2.5 .9 4.9 2 7.1 3.3l2.6 1.5c1.3-.8 2.6-1.6 4-2.3v-3c0-19.4 13.3-39.1 35.8-42.6c7.9-1.2 16-1.9 24.2-1.9s16.3 .6 24.2 1.9c22.5 3.5 35.8 23.2 35.8 42.6v3c1.3 .7 2.7 1.5 4 2.3l2.6-1.5c16.8-9.7 40.5-8 54.7 9.7c2.3 2.8 4.5 5.8 6.6 8.7c-2.1-57.1-49-102.7-106.6-102.7zm91.3 163.9c6.3-3.6 9.5-11.1 6.8-18c-2.1-5.5-4.6-10.8-7.4-15.9l-2.3-4c-3.1-5.1-6.5-9.9-10.2-14.5c-4.6-5.7-12.7-6.7-19-3L574.4 311c-8.9-7.6-19.1-13.6-30.4-17.6v-21c0-7.3-4.9-13.8-12.1-14.9c-6.5-1-13.1-1.5-19.9-1.5s-13.4 .5-19.9 1.5c-7.2 1.1-12.1 7.6-12.1 14.9v21c-11.2 4-21.5 10-30.4 17.6l-18.2-10.5c-6.3-3.6-14.4-2.6-19 3c-3.7 4.6-7.1 9.5-10.2 14.6l-2.3 3.9c-2.8 5.1-5.3 10.4-7.4 15.9c-2.6 6.8 .5 14.3 6.8 17.9l18.2 10.5c-1 5.7-1.6 11.6-1.6 17.6s.6 11.9 1.6 17.5l-18.2 10.5c-6.3 3.6-9.5 11.1-6.8 17.9c2.1 5.5 4.6 10.7 7.4 15.8l2.4 4.1c3 5.1 6.4 9.9 10.1 14.5c4.6 5.7 12.7 6.7 19 3L449.6 457c8.9 7.6 19.2 13.6 30.4 17.6v21c0 7.3 4.9 13.8 12.1 14.9c6.5 1 13.1 1.5 19.9 1.5s13.4-.5 19.9-1.5c7.2-1.1 12.1-7.6 12.1-14.9v-21c11.2-4 21.5-10 30.4-17.6l18.2 10.5c6.3 3.6 14.4 2.6 19-3c3.7-4.6 7.1-9.4 10.1-14.5l2.4-4.2c2.8-5.1 5.3-10.3 7.4-15.8c2.6-6.8-.5-14.3-6.8-17.9l-18.2-10.5c1-5.7 1.6-11.6 1.6-17.5s-.6-11.9-1.6-17.6l18.2-10.5zM472 384a40 40 0 1 1 80 0 40 40 0 1 1 -80 0z"
+          ></path>
+        </svg>
+      ),
       number: 6,
       title: "المنتجات",
       color: "linear-gradient(135deg,#485563,#29323c)",
     },
     {
-      icon: <FaBiking size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="car"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"
+          ></path>
+        </svg>
+      ),
       number: 7,
       title: "المندوبين",
       color: "linear-gradient(135deg,#00b09b,#96c93d)",
     },
     {
-      icon: <FaCalculator size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="chart-line"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"
+          ></path>
+        </svg>
+      ),
       number: 8,
       title: "الحسابات",
       color: "linear-gradient(135deg,#8e2de2,#4a00e0)",
     },
     {
-      icon: <FaHome size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="user-check"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM625 177L497 305c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L591 143c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+          ></path>
+        </svg>
+      ),
       number: 9,
       title: "الرئيسية",
       color: "linear-gradient(135deg,#1abc9c,#16a085)",
     },
     {
-      icon: <FaCog size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="user"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+          ></path>
+        </svg>
+      ),
       number: 10,
       title: "الخيارات",
       color: "linear-gradient(135deg,#6c757d,#495057)",
     },
     {
-      icon: <FaQuestionCircle size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="truck-fast"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"
+          ></path>
+        </svg>
+      ),
       number: 11,
       title: "الأسئلة",
       color: "linear-gradient(135deg,#f12711,#f5af19)",
     },
     {
-      icon: <FaGift size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="arrow-down"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          ></path>
+        </svg>
+      ),
       number: 12,
       title: "الهدايا",
       color: "linear-gradient(135deg,#ff512f,#dd2476)",
     },
     {
-      icon: <FaGift size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="arrow-up"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+          ></path>
+        </svg>
+      ),
       number: 12,
       title: "الهدايا",
       color: "linear-gradient(135deg,#ff512f,#dd2476)",
     },
     {
-      icon: <FaGift size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="users-gear"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M144 160A80 80 0 1 0 144 0a80 80 0 1 0 0 160zm368 0A80 80 0 1 0 512 0a80 80 0 1 0 0 160zM0 298.7C0 310.4 9.6 320 21.3 320H234.7c.2 0 .4 0 .7 0c-26.6-23.5-43.3-57.8-43.3-96c0-7.6 .7-15 1.9-22.3c-13.6-6.3-28.7-9.7-44.6-9.7H106.7C47.8 192 0 239.8 0 298.7zM320 320c24 0 45.9-8.8 62.7-23.3c2.5-3.7 5.2-7.3 8-10.7c2.7-3.3 5.7-6.1 9-8.3C410 262.3 416 243.9 416 224c0-53-43-96-96-96s-96 43-96 96s43 96 96 96zm65.4 60.2c-10.3-5.9-18.1-16.2-20.8-28.2H261.3C187.7 352 128 411.7 128 485.3c0 14.7 11.9 26.7 26.7 26.7H455.2c-2.1-5.2-3.2-10.9-3.2-16.4v-3c-1.3-.7-2.7-1.5-4-2.3l-2.6 1.5c-16.8 9.7-40.5 8-54.7-9.7c-4.5-5.6-8.6-11.5-12.4-17.6l-.1-.2-.1-.2-2.4-4.1-.1-.2-.1-.2c-3.4-6.2-6.4-12.6-9-19.3c-8.2-21.2 2.2-42.6 19-52.3l2.7-1.5c0-.8 0-1.5 0-2.3s0-1.5 0-2.3l-2.7-1.5zM533.3 192H490.7c-15.9 0-31 3.5-44.6 9.7c1.3 7.2 1.9 14.7 1.9 22.3c0 17.4-3.5 33.9-9.7 49c2.5 .9 4.9 2 7.1 3.3l2.6 1.5c1.3-.8 2.6-1.6 4-2.3v-3c0-19.4 13.3-39.1 35.8-42.6c7.9-1.2 16-1.9 24.2-1.9s16.3 .6 24.2 1.9c22.5 3.5 35.8 23.2 35.8 42.6v3c1.3 .7 2.7 1.5 4 2.3l2.6-1.5c16.8-9.7 40.5-8 54.7 9.7c2.3 2.8 4.5 5.8 6.6 8.7c-2.1-57.1-49-102.7-106.6-102.7zm91.3 163.9c6.3-3.6 9.5-11.1 6.8-18c-2.1-5.5-4.6-10.8-7.4-15.9l-2.3-4c-3.1-5.1-6.5-9.9-10.2-14.5c-4.6-5.7-12.7-6.7-19-3L574.4 311c-8.9-7.6-19.1-13.6-30.4-17.6v-21c0-7.3-4.9-13.8-12.1-14.9c-6.5-1-13.1-1.5-19.9-1.5s-13.4 .5-19.9 1.5c-7.2 1.1-12.1 7.6-12.1 14.9v21c-11.2 4-21.5 10-30.4 17.6l-18.2-10.5c-6.3-3.6-14.4-2.6-19 3c-3.7 4.6-7.1 9.5-10.2 14.6l-2.3 3.9c-2.8 5.1-5.3 10.4-7.4 15.9c-2.6 6.8 .5 14.3 6.8 17.9l18.2 10.5c-1 5.7-1.6 11.6-1.6 17.6s.6 11.9 1.6 17.5l-18.2 10.5c-6.3 3.6-9.5 11.1-6.8 17.9c2.1 5.5 4.6 10.7 7.4 15.8l2.4 4.1c3 5.1 6.4 9.9 10.1 14.5c4.6 5.7 12.7 6.7 19 3L449.6 457c8.9 7.6 19.2 13.6 30.4 17.6v21c0 7.3 4.9 13.8 12.1 14.9c6.5 1 13.1 1.5 19.9 1.5s13.4-.5 19.9-1.5c7.2-1.1 12.1-7.6 12.1-14.9v-21c11.2-4 21.5-10 30.4-17.6l18.2 10.5c6.3 3.6 14.4 2.6 19-3c3.7-4.6 7.1-9.4 10.1-14.5l2.4-4.2c2.8-5.1 5.3-10.3 7.4-15.8c2.6-6.8-.5-14.3-6.8-17.9l-18.2-10.5c1-5.7 1.6-11.6 1.6-17.5s-.6-11.9-1.6-17.6l18.2-10.5zM472 384a40 40 0 1 1 80 0 40 40 0 1 1 -80 0z"
+          ></path>
+        </svg>
+      ),
       number: 12,
       title: "الهدايا",
       color: "linear-gradient(135deg,#ff512f,#dd2476)",
     },
     {
-      icon: <FaGift size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="car-side"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M171.3 96H224v96H111.3l30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192V96h81.2c9.7 0 18.9 4.4 25 12l67.2 84H272zm256.2 1L428.2 68c-18.2-22.8-45.8-36-75-36H171.3c-39.3 0-74.6 23.9-89.1 60.3L40.6 196.4C16.8 205.8 0 228.9 0 256V368c0 17.7 14.3 32 32 32H65.3c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80H385.3c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80H608c17.7 0 32-14.3 32-32V320c0-65.2-48.8-119-111.8-127zM434.7 368a48 48 0 1 1 90.5 32 48 48 0 1 1 -90.5-32zM160 336a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+          ></path>
+        </svg>
+      ),
       number: 12,
       title: "الهدايا",
       color: "linear-gradient(135deg,#ff512f,#dd2476)",
     },
     {
-      icon: <FaGift size={24} />,
+      icon: (
+        <svg
+          className="icon"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="users"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          data-fa-i2svg=""
+        >
+          <path
+            fill="currentColor"
+            d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"
+          ></path>
+        </svg>
+      ),
       number: 12,
       title: "الهدايا",
       color: "linear-gradient(135deg,#ff512f,#dd2476)",
@@ -121,7 +377,7 @@ function Home() {
   return (
     <Master>
       <div className="main-content slide-up">
-        <div className="floating-toolbar ">
+        <div className="floating-toolbar ml-[10px]">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg
               className=""
@@ -194,8 +450,8 @@ function Home() {
         <br />
         <br />
 
-        <div className="page-title ">
-          <h1 className="flex ml-[400px] flex-row justify-center">
+        <div className="page-title w-[190vh]">
+          <h1 className="flex flex-row ml-[700px]">
             لوحة التحكم الرئيسية
             <svg
               // className="sav"
@@ -216,7 +472,14 @@ function Home() {
           </h1>
         </div>
 
+
+
+
+
+
+
         <div className="cards">
+          
           <div className="cardat">
             <svg
               className="svg"
@@ -260,7 +523,12 @@ function Home() {
           </div>
         </div>
 
-        <div className="section-title w-[1550px] flex flex-row justify-end text-center items-center">
+
+
+
+
+
+        <div className="section-title w-[1550px] flex flex-row justify-end res text-center items-center">
           إحصائيات النظام
           <svg
             className="svg-inline--fa fa-chart-bar me-2"
@@ -280,6 +548,9 @@ function Home() {
           </svg>
         </div>
 
+
+
+
         <div className="cards-container">
           {cardsData.map((card, index) => (
             <div
@@ -295,6 +566,9 @@ function Home() {
             </div>
           ))}
         </div>
+
+
+
 
         <div className="section-title w-[1540px] flex flex-row justify-end text-center items-center">
           النشاط الأخير

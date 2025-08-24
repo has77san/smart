@@ -5,135 +5,264 @@ import Master from "../../../../Master";
 import Form from "../../../UI/Form";
 import Input from "../../../UI/Input";
 import Select from "../../../UI/Select";
+import "./custme.css";
 
 function CreateCustomReport() {
-  const options = [
-    {
-      label: "المندوبين",
-      value: "المندوبين",
-    },
-    {
-      label: "السائقين",
-      value: "السائقين",
-    },
-    {
-      label: "الناقلين",
-      value: "الناقلين",
-    },
-  ];
   return (
     <Master>
       <div className="container-main">
-        <div className="floating-toolbar">
-          <a href="/" className="toolbar-icon" title="مندوب جديد">
-            <svg
-              className="svg"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="users-gear"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 640 512"
-              data-fa-i2svg=""
-            >
-              <path
-                fill="currentColor"
-                d="M144 160A80 80 0 1 0 144 0a80 80 0 1 0 0 160zm368 0A80 80 0 1 0 512 0a80 80 0 1 0 0 160zM0 298.7C0 310.4 9.6 320 21.3 320H234.7c.2 0 .4 0 .7 0c-26.6-23.5-43.3-57.8-43.3-96c0-7.6 .7-15 1.9-22.3c-13.6-6.3-28.7-9.7-44.6-9.7H106.7C47.8 192 0 239.8 0 298.7zM320 320c24 0 45.9-8.8 62.7-23.3c2.5-3.7 5.2-7.3 8-10.7c2.7-3.3 5.7-6.1 9-8.3C410 262.3 416 243.9 416 224c0-53-43-96-96-96s-96 43-96 96s43 96 96 96zm65.4 60.2c-10.3-5.9-18.1-16.2-20.8-28.2H261.3C187.7 352 128 411.7 128 485.3c0 14.7 11.9 26.7 26.7 26.7H455.2c-2.1-5.2-3.2-10.9-3.2-16.4v-3c-1.3-.7-2.7-1.5-4-2.3l-2.6 1.5c-16.8 9.7-40.5 8-54.7-9.7c-4.5-5.6-8.6-11.5-12.4-17.6l-.1-.2-.1-.2-2.4-4.1-.1-.2-.1-.2c-3.4-6.2-6.4-12.6-9-19.3c-8.2-21.2 2.2-42.6 19-52.3l2.7-1.5c0-.8 0-1.5 0-2.3s0-1.5 0-2.3l-2.7-1.5zM533.3 192H490.7c-15.9 0-31 3.5-44.6 9.7c1.3 7.2 1.9 14.7 1.9 22.3c0 17.4-3.5 33.9-9.7 49c2.5 .9 4.9 2 7.1 3.3l2.6 1.5c1.3-.8 2.6-1.6 4-2.3v-3c0-19.4 13.3-39.1 35.8-42.6c7.9-1.2 16-1.9 24.2-1.9s16.3 .6 24.2 1.9c22.5 3.5 35.8 23.2 35.8 42.6v3c1.3 .7 2.7 1.5 4 2.3l2.6-1.5c16.8-9.7 40.5-8 54.7 9.7c2.3 2.8 4.5 5.8 6.6 8.7c-2.1-57.1-49-102.7-106.6-102.7zm91.3 163.9c6.3-3.6 9.5-11.1 6.8-18c-2.1-5.5-4.6-10.8-7.4-15.9l-2.3-4c-3.1-5.1-6.5-9.9-10.2-14.5c-4.6-5.7-12.7-6.7-19-3L574.4 311c-8.9-7.6-19.1-13.6-30.4-17.6v-21c0-7.3-4.9-13.8-12.1-14.9c-6.5-1-13.1-1.5-19.9-1.5s-13.4 .5-19.9 1.5c-7.2 1.1-12.1 7.6-12.1 14.9v21c-11.2 4-21.5 10-30.4 17.6l-18.2-10.5c-6.3-3.6-14.4-2.6-19 3c-3.7 4.6-7.1 9.5-10.2 14.6l-2.3 3.9c-2.8 5.1-5.3 10.4-7.4 15.9c-2.6 6.8 .5 14.3 6.8 17.9l18.2 10.5c-1 5.7-1.6 11.6-1.6 17.6s.6 11.9 1.6 17.5l-18.2 10.5c-6.3 3.6-9.5 11.1-6.8 17.9c2.1 5.5 4.6 10.7 7.4 15.8l2.4 4.1c3 5.1 6.4 9.9 10.1 14.5c4.6 5.7 12.7 6.7 19 3L449.6 457c8.9 7.6 19.2 13.6 30.4 17.6v21c0 7.3 4.9 13.8 12.1 14.9c6.5 1 13.1 1.5 19.9 1.5s13.4-.5 19.9-1.5c7.2-1.1 12.1-7.6 12.1-14.9v-21c11.2-4 21.5-10 30.4-17.6l18.2 10.5c6.3 3.6 14.4 2.6 19-3c3.7-4.6 7.1-9.4 10.1-14.5l2.4-4.2c2.8-5.1 5.3-10.3 7.4-15.8c2.6-6.8-.5-14.3-6.8-17.9l-18.2-10.5c1-5.7 1.6-11.6 1.6-17.5s-.6-11.9-1.6-17.6l18.2-10.5zM472 384a40 40 0 1 1 80 0 40 40 0 1 1 -80 0z"
-              ></path>
-            </svg>
-            <i className="fas fa-users-cog"></i>
-          </a>
+        <br />
+        <br />
 
-          <a
-            href="/mandob_map"
-            className="toolbar-icon"
-            title="مراقبة المندوبين"
-          >
-            <svg
-              className="svg"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="map-location-dot"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512"
-              data-fa-i2svg=""
-            >
-              <path
-                fill="currentColor"
-                d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
-              ></path>
-            </svg>
-            <i className="fas fa-map-marked-alt"></i>
-          </a>
+        <div className="flex justify-between w-[160vh]">
+          <div className="brnleft">
+            <button className="btn flex ">
+              العودة للقائمة{" "}
+              <span className="ml-[10px] m-[5px]">
+                <svg
+                  class="svg-inline--fa fa-arrow-right me-1"
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="arrow-right"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  data-fa-i2svg=""
+                >
+                  <path
+                    fill="currentColor"
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </div>
 
-          <a
-            href="/captain_map"
-            className="toolbar-icon"
-            title="مراقبة السائقين"
-          >
-            <svg
-              className="svg"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="plus"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-              data-fa-i2svg=""
-            >
-              <path
-                fill="currentColor"
-                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-              ></path>
-            </svg>
-            <i className="fas fa-plus"></i>
-          </a>
+          <div className="ml-[0px]">
+            <div className="flex ml-[20px]">
+              <h2 className="ml-[50px] text-[30px] text-black">
+                إنشاء تقرير مخصص
+              </h2>
+              <svg
+                className="icone"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="clipboard-list"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                data-fa-i2svg=""
+              >
+                <path
+                  fill="currentColor"
+                  d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"
+                ></path>
+              </svg>
+            </div>
+            <div className="">
+              <p>إنشاء تقرير جديد مع أسئلة متعددة للفئة المستهدفة</p>
+            </div>
+          </div>
         </div>
 
-        <PageHeader Title={"انشاء تقرير استبياني"} />
 
-        <PageFilter />
 
-        <div className="my-5">
-          <Form>
-            <Input
-              title="عنوان التقرير"
-              icon="H"
-              placeholder="ادخل عنوان التقرير..."
-              description="عنوان وصفي للتقرير سيظهر للمستخدمين"
-            />
 
-            <div className="flex flex-row gap-4">
-              <Select
-                title="المنـدوب"
-                icon={<FaUser />}
-                options={options}
-                description="اترك فارغاً لجميع المندوبين"
-              />
-              <Select
-                title="الفئة المستهدفة"
-                icon={<FaUsers />}
-                options={options}
-                description="حدد من سيجيب على هذا التقرير"
-              />
+
+
+
+        <div className="my-5 ml-[50px] w-[170vh] flex">
+
+
+
+
+
+          <div
+            dir="rtl"
+            class="bg-white shadow-md rounded-2xl border w-[600px] h-[300px] border-gray-200 mb-6"
+          >
+            <div class="bg-gray-900 text-white px-4 py-3 rounded-t-[8px] flex items-center">
+              <i class="fas fa-gears ml-2"></i>
+              <h6 class="text-sm font-semibold">الإجراءات</h6>
             </div>
 
-            <div className="flex flex-row justify-end items-center gap-2 mt-4">
-              <label className="flex items-center gap-2">
-                <span>فعال؟</span>
+            <div class="p-6 space-y-4">
+              <div class="grid gap-3">
+                <button
+                  type="submit"
+                  id="saveReportBtn"
+                  disabled
+                  class="w-full flex items-center justify-center rounded-lg bg-green-600 text-white py-2.5 text-sm font-semibold hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <i class="fas fa-floppy-disk ml-2"></i>
+                  حفظ التقرير
+                </button>
+
+                <a
+                  href="/list_custom_reports"
+                  class="w-full flex items-center justify-center rounded-lg border border-red-500 text-red-600 py-2.5 text-sm font-semibold hover:bg-red-500 transition hover:text-white"
+                >
+                  <i class="fas fa-xmark ml-2"></i>
+                  إلغاء
+                </a>
+              </div>
+
+              <hr class="border-gray-200" />
+
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                <small class="flex items-center text-blue-700 text-sm">
+                  <i class="fas fa-circle-info text-blue-500 ml-2"></i>
+                  <strong class="mr-1">تذكير:</strong>
+                  يجب إضافة سؤال واحد على الأقل لحفظ التقرير  
+                </small>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div
+            dir="rtl"
+            class="bg-white shadow-md rounded-[5px] w-[900px] ml-[20px] h-[400px] border border-gray-200 mb-6"
+          >
+            <div class="bg-[rgba(25,135,84)] text-white px-4 py-3 rounded-t-[8px] flex items-center">
+              <i class="fas fa-circle-info ml-2"></i>
+              <h6 class="text-sm font-semibold">معلومات التقرير الأساسية</h6>
+            </div>
+
+            <div class="p-6 space-y-6">
+              <div>
+                <label
+                  for="title"
+                  class="block text-sm font-bold text-gray-800 mb-1"
+                >
+                  <i class="fas fa-heading text-green-600 ml-1"></i>
+                  عنوان التقرير <span class="text-red-500">*</span>
+                </label>
                 <input
-                  type="checkbox"
-                  defaultChecked
-                  className="toggle toggle-success"
+                  id="title"
+                  name="title"
+                  type="text"
+                  required
+                  maxlength="200"
+                  placeholder="أدخل عنوان التقرير..."
+                  class="w-full rounded-lg border-2 border-gray-300 px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500"
                 />
-              </label>
+                <p class="text-xs text-gray-500 mt-1">
+                  عنوان وصفي للتقرير سيظهر للمستخدمين
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="target_type"
+                    class="block text-sm font-bold text-gray-800 mb-1"
+                  >
+                    <i class="fas fa-users text-green-600 ml-1"></i>
+                    الفئة المستهدفة <span class="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="target_type"
+                    name="target_type"
+                    required
+                    class="w-full rounded-lg border-2 border-gray-300 px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  >
+                    <option value="" selected>
+                      ---------
+                    </option>
+                    <option value="mandob">المندوبين</option>
+                    <option value="captain">السائقين</option>
+                    <option value="company">الناقلين</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-1">
+                    حدد من سيجيب على هذا التقرير
+                  </p>
+                </div>
+
+                <div>
+                  <label
+                    for="mandob"
+                    class="block text-sm font-bold text-gray-800 mb-1"
+                  >
+                    <i class="fas fa-user text-blue-500 ml-1"></i>
+                    المندوب
+                  </label>
+                  <select
+                    id="mandob"
+                    name="mandob"
+                    class="w-full rounded-lg border-2 border-gray-300 px-3 py-2 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                  >
+                    <option value="" selected>
+                      جميع المندوبين
+                    </option>
+                    <option value="2">hsggahmed</option>
+                    <option value="4">علي الكرار صفاء</option>
+                    <option value="5">حيدر حميد فنجان</option>
+                    <option value="7">بغداد/الكرخ</option>
+                    <option value="8">وسام حسام</option>
+                    <option value="9">علي الكرار امارات</option>
+                  </select>
+                  <p class="text-xs text-gray-500 mt-1">
+                    اترك فارغاً لجميع المندوبين
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center">
+                  <input
+                    id="is_active"
+                    name="is_active"
+                    type="checkbox"
+                    checked
+                    class="h-5 w-5 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                  />
+                  <label
+                    for="is_active"
+                    class="mr-2 text-sm font-bold text-gray-800 flex items-center"
+                  >
+                    <i class="fas fa-toggle-on text-green-600 ml-1"></i> فعال؟
+                  </label>
+                </div>
+                <p class="text-xs text-gray-500">
+                  سيكون التقرير متاحاً للمستخدمين
+                </p>
+              </div>
             </div>
-          </Form>
+          </div>
         </div>
+
+<div dir="rtl" class="bg-white shadow-md rounded-[5px] ml-[670px] w-[900px] h-[300px] border border-gray-200 mb-6">
+
+  <div class="bg-green-600 text-white px-4 py-3 rounded-t-[5px] flex items-center justify-between">
+    <h6 class="flex items-center text-sm font-semibold">
+      <i class="fas fa-circle-question ml-2"></i>
+      أسئلة التقرير
+      <span id="questionCount" class="ml-2 inline-flex items-center justify-center rounded-full bg-white text-gray-800 text-xs font-bold px-2 py-0.5">0</span>
+    </h6>
+    <button type="button" id="addQuestionBtn"
+            class="flex items-center rounded-lg border border-white px-3 py-1.5 text-sm font-medium hover:bg-white hover:text-green-600 transition">
+      <i class="fas fa-plus ml-1"></i>
+      إضافة سؤال
+    </button>
+  </div>
+
+
+  <div class="p-6">
+    <div id="questionsContainer">
+
+      <div id="noQuestionsMessage" class="text-center py-10 text-gray-500">
+        <i class="fas fa-circle-question fa-3x mb-3 text-gray-400"></i>
+        <h5 class="text-lg font-semibold">لا توجد أسئلة بعد</h5>
+        <p class="text-sm">انقر على "إضافة سؤال" لبدء إنشاء الأسئلة</p>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     </Master>
   );

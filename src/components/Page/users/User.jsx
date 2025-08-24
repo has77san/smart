@@ -84,12 +84,12 @@ function User() {
           </a>
         </div>
 
-        <PageHeader Title={"إدارة الزبائن"} Text={"عرض وإدارة كافة الزبائن المسجلين"}/>
+        <PageHeader btnone={"اضافة زبون +"} Title={"إدارة الزبائن"} Text={"عرض وإدارة كافة الزبائن المسجلين"}/>
            
           <PageFilter/>
 
          <div className="mt-[40px]">
-           <Table/>
+           <Table titleone={"الاسم"} titletow={"رقم الهاتف"} list={"قائمة الزبائن"} titlethree={"العنوان"} titlefour={"الحالة"} titlefive={"الإجراءات"}/>
          </div>
 
 

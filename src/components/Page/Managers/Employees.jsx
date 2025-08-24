@@ -12,7 +12,7 @@ function Employees() {
     
     <Master>
       <div className="container-main slide-up">
-        <div className="floating-toolbar">
+        <div className="floating-toolbar m-[-40px]">
           <a href="/" className="toolbar-icon" title="مندوب جديد">
             <svg
               className="svg"
@@ -82,12 +82,12 @@ function Employees() {
           </a>
         </div>
 
-        <PageHeader  Title={"الموظفين"} Text={"عرض وإدارة جميع موظفي النظام"} icon={<FaUsers  />}/>
+        <PageHeader  Title={"الموظفين"} Text={"عرض وإدارة جميع موظفي النظام"} btnone={"اضافة موظف +"} icon={<FaUsers  />}/>
            
           <PageFilter />
 
          <div className="mt-[40px]">
-           <Table titleone={"الاسم"} titletow={"رقم الهاتف"} titlethree={"المسمى الوظيفي"} titlefour={"الحالة"} titlefive={"الإجراءات"} titlesix={"الإجراءات"}/>
+           <Table list={"قائمة الموظفين"} titleone={"الاسم"} titletow={"رقم الهاتف"} titlethree={"المسمى الوظيفي"} titlefour={"الحالة"} titlefive={"الإجراءات"} titlesix={"الإجراءات"}  />
          </div>
 
 
