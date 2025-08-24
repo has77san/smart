@@ -1,0 +1,33 @@
+.icone {
+    width: 30px;
+    height: 30px;
+    margin: 7px 0px;
+    color: rgba(25,135,84);
+}
+
+p {
+    color: rgba(33, 37, 41, 0.75);
+}
+
+.brnleft {
+    display: flex;
+    border: 1px solid gray;
+    width: 150px;
+    margin: 0 100px;
+    height: 30px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.brnleft:hover {
+    background-color: gray;
+}
+.btn {
+    color: gray;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #fff;
+}

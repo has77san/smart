@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  align-items: center; /* توسيط عمودي */
-  flex-wrap: wrap; /* يخلي العناصر تنزل للسطر الثاني إذا ماكو مساحة */
+  align-items: center; 
+  flex-wrap: wrap; 
   font-family: "Cairo", sans-serif !important;
   padding: 10px 20px;
 }
@@ -21,7 +21,7 @@
 }
 
 .header .header-right {
-  margin-left: auto; /* يخليها تروح لأقصى يمين */
+  margin-left: auto;
 }
 
 .heqder-title {
@@ -40,7 +40,7 @@
 
 .header .header-left {
   display: flex;
-  gap: 10px; /* مسافة بين الأزرار */
+  gap: 10px; 
   margin: 20px;
   flex-wrap: wrap;
 }
@@ -78,7 +78,6 @@ svg {
   height: 15px;
 }
 
-/* Media Queries للاستجابة */
 @media (max-width: 992px) {
   .heqder-title {
     font-size: 14px;
@@ -90,11 +89,11 @@ svg {
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* العناصر تصير فوق بعض */
+    flex-direction: column; 
     align-items: flex-start;
   }
   .header .header-right {
-    margin-left: 0; /* نشيل الهوامش */
+    margin-left: 0; 
     margin-top: 10px;
   }
   .header-left {

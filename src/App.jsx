@@ -11,6 +11,7 @@ import Delegates from "./components/Page/Delegates/Delegates";
 import Shipments from "./components/Page/Shipments/Shipments";
 import CreateCustomReport from "./components/Page/Report/CustomReport/CreateCustomReport";
 import ListReport from "./components/Page/Report/ListReport/ListReport";
+import Questionnaire from "./components/Page/Report/CustomReport/Questionnaire";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/shipments" element={<Shipments />} />
           <Route path="/create_custom_report" element={<CreateCustomReport />} />
           <Route path="/list_custom_report" element={<ListReport />} />
+          <Route path="/questionnaire" element={<Questionnaire />} />
 
         </Routes>
       </div>

@@ -83,6 +83,7 @@
     cursor: pointer;
     width: 180vh;
     margin-left: 50px;
+    grid-template-columns: 1fr;
 }
 
 .cardat {
@@ -169,18 +170,17 @@
   position: absolute;
   top: -30px;     
   right: -30px;   
-  width: 100px;   
-  height: 100px;
+  width:80px;   
+  height: 78px;
   background: rgba(255, 255, 255, 0.15); 
   border-radius: 50%; 
   z-index: 0;     
 }
 
-.card-icon {
-  font-size: 22px;
-  position: relative;
-  z-index: 1;   
-  margin-left: 10px;
+.icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 40px;
 }
 
 .card-text {
@@ -188,7 +188,7 @@
 }
 
 .card-text h3 {
-  margin: 0;
+  margin: 5px 0;
   font-size: 1.4rem;
 }
 
@@ -255,4 +255,62 @@
 .p_footer_two p {
     font-size: 15px;
     color: #fff;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1700px) and (max-width:1855px) {
+    .res {
+       width: 195vh;
+    }
+}
+
+
+@media screen and (min-width:1807px) and (max-width:1835px) {
+    .res {
+       width: 190vh;
+    }
+}
+
+@media screen and (min-width:1770px) and (max-width:1807px) {
+    .res {
+       width: 185vh;
+    }
+}
+
+@media screen and (min-width:1750px) and (max-width:1700px) {
+    .res {
+       background-color: red;
+    }
+}
+
+
+@media screen and (min-width:1700px) and (max-width:1750px) {
+    .cards {
+       width: 175vh;
+    }
+}
+
+
+
+@media screen and (min-width:1672px) and (max-width:1700px) {
+    .cards {
+       width: 170vh;
+    }
+}
+
+@media screen and (min-width:1600px) and (max-width:1672px) {
+    .cards {
+       width: 160vh;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:1600px) {
+    .cards {
+       width: 155vh;
+    }
 }
