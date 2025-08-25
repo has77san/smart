@@ -70,16 +70,16 @@ function PageFilter() {
             transition={{ duration: 0.4 }}
           >
             <div className="flex flex-col text-right">
-              <label className="mb-1 text-sm font-medium">المدينة</label>
+              <label className="mb-1 text-sm font-medium">الهاتف</label>
               <input
                 type="text"
                 className="border border-gray-300 rounded-md px-3 h-12 text-right placeholder:text-right"
-                placeholder="ادخل اسم المدينة"
+                
               />
             </div>
 
             <div className="flex flex-col text-right">
-              <label className="mb-1 text-sm font-medium">العمر</label>
+              <label className="mb-1 text-sm font-medium">الاسم يحتوي على</label>
               <input
                 type="text"
                 className="border border-gray-300 rounded-md px-3 h-12 text-right placeholder:text-right"
@@ -88,7 +88,7 @@ function PageFilter() {
             </div>
 
             <div className="flex flex-col text-right">
-              <label className="mb-1 text-sm font-medium">الوظيفة</label>
+              <label className="mb-1 text-sm font-medium">المسمى الوظيفي يحتوي على</label>
               <input
                 type="text"
                 className="border border-gray-300 rounded-md px-3 h-12 text-right placeholder:text-right"
@@ -97,13 +97,20 @@ function PageFilter() {
             </div>
 
             <div className="flex flex-col text-right">
-              <label className="mb-1 text-sm font-medium">الهاتف</label>
+              <label className="mb-1 text-sm font-medium">فعال؟</label>
               <input
                 type="text"
                 className="border border-gray-300 rounded-md px-3 h-12 text-right placeholder:text-right"
                 placeholder="ادخل رقم الهاتف"
-              />
+              /><br/>
+              <hr className="w-[1469px]" />
+              <div className="m-[20px] flex">
+                <button className="bg-[#307bec] text-[#fff] ml-[15px] px-[10px] py-[3px] rounded-[5px] flex"> <svg className="m-[6px]" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> تطبيق الفلترة</button>
+                <button className="border border">مسح فلتره</button>
+              </div>
+
             </div>
+            
           </motion.div>
         )}
       </AnimatePresence>
